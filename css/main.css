@@ -1,0 +1,32 @@
+* {
+    box-sizing: border-box;
+    text-align:-webkit-center;
+}
+
+title {
+    font-family: serif;
+    color: rgb(196, 31, 31);
+}
+
+h1 { 
+    text-decoration: underline;
+    font-variant: small-caps;
+}
+
+div{
+    font: 1em sans-serif;
+    color: rgb(114, 27, 27);
+    size: 25px;
+    
+}
+
+table {
+    border-collapse: collapse;
+    text-align: center;
+}
+
+td {
+    border: 5px solid rgb(182, 13, 21);
+    height: 67px;
+    width: 67px;
+}
