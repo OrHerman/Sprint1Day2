@@ -8,15 +8,43 @@
     <title>Document</title>
     <link rel="stylesheet" href="css/main.css">
 </head>
+<style>
+    body {
+        background-image: url('img/Capture2.PNG');
+        background-repeat: no-repeat;
+        background-size: auto; 
+        background-size: 100% 100%; 
+        background-attachment: fixed;
+        
+    }
+</style>
 
-<body onload="initGame()">
-    <h1>Welcome to Mine Sweeper Event!</h1>
-    <div id="4" class="level -EASY-" onclick="setChosenLevel(this)">-EASY-</div>
-    <div id="8" class="level -MEDIUM-" onclick="setChosenLevel(this)">-MEDIUM-</div>
-    <div id="12" class="level -HARD-" onclick="setChosenLevel(this)">-HARD-</div>
-    <table>
-        <tbody></tbody>
-    </table>
+<body onload="initGame()" >
+    <div class="fade-in-div"> 
+        <h1>Mine-Sweeper!</h1>
+        <button id="4" onclick="setChosenLevel(this)" >EASY</button>
+        <button id="8" onclick="setChosenLevel(this)" >MEDIUM</button>
+        <button id="12" onclick="setChosenLevel(this)" >HARD</button>
+
+        <!-- <span class="Timer">
+                       Time Left:
+            <input id="minutes" type="text" style="width: 20px;
+                 border: none; font-size: 16px; 
+                 font-weight: bold; color: black;"> :
+                            
+            <input id="seconds" type="text" style="width: 20px;
+                            border: none; font-size: 16px;
+                            font-weight: bold; color: black;">
+        </span> -->
+    
+        <!-- <div id="4" class="level -EASY-" onclick="setChosenLevel(this)">--EASY--</div>
+        <div id="8" class="level -MEDIUM-" onclick="setChosenLevel(this)">--MEDIUM--</div>
+        <div id="12" class="level -HARD-" onclick="setChosenLevel(this)">--HARD--</div> -->
+        <table>
+            <tbody></tbody>
+        </table>
+    </div>
+
     <script src="js/utils.js"></script>
     <script src="js/main.js"></script>
 </body>

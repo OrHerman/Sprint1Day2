@@ -2,6 +2,8 @@
 
 const MINE = '💣';
 const FLAG = '🚩';
+var mins = 2;
+var secs = mins * 60;
 
 var gBoard;
 
@@ -30,6 +32,7 @@ function initGame() {
     gEmptyCells = [];
     gBoard = createMat(gChosenLevel.SIZE);
     renderBoard(gBoard);
+    
 }
 
 // Sets the level that the user chose.
@@ -82,11 +85,12 @@ function cellClicked(event) {
             cell.style.backgroundColor = 'red';
             renderCell(cell, MINE);
             gameOver();
+            setTimeout(function(){ alert("You Lost!"); }, 300);
         }
         if (!currCell.isMine && !currCell.minesAroundCount) getBoardLevel(gBoard, { i: +i, j: +j });
     }
     else if (event.button === 2) cellMarked(cell, +i, +j);
-    setTimeout(checkGameOver, 100);
+    setTimeout(checkGameStatus, 100);
 }
 
 // Called on right click to mark a cell.
@@ -115,10 +119,11 @@ function gameOver() {
             if (currCell.isMine) renderCell(tableCell, MINE);
         }
     }
+    
 }
 
 // Checks if the game is done and shows a winner sign.
-function checkGameOver() {
+function checkGameStatus() {
     if (gChosenLevel.SIZE ** 2 - gChosenLevel.MINES === gGame.shownCount) {
         for (var i = 0; i < gBoard.length; i++) {
             for (var j = 0; j < gBoard.length; j++) {
@@ -129,7 +134,7 @@ function checkGameOver() {
                 }
             }
         }
-        alert('WINNER!');
+        alert('Won this time, try a harder level!');
     }
 }
 

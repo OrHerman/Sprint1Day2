@@ -5,28 +5,83 @@
 
 title {
     font-family: serif;
-    color: rgb(196, 31, 31);
+    color: rgb(0, 0, 0);
 }
 
 h1 { 
-    text-decoration: underline;
-    font-variant: small-caps;
+    color: rgb(70, 32, 8);
+    font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-size:xx-large;
+    
 }
 
 div{
-    font: 1em sans-serif;
-    color: rgb(114, 27, 27);
-    size: 25px;
-    
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    color: rgb(29, 2, 2);
+    font-size: 110%;
 }
 
 table {
     border-collapse: collapse;
     text-align: center;
 }
-
-td {
-    border: 5px solid rgb(182, 13, 21);
+td:hover {
+    border: 5px solid rgb(16, 32, 179);
     height: 67px;
     width: 67px;
+    background-color: rgb(131, 165, 165);
 }
+td {
+    border: 5px solid rgb(16, 32, 179);
+    height: 67px;
+    width: 67px;
+    
+}
+button:hover{
+    border-radius: 21px;
+    min-width: 100px;
+    min-height: 28px;
+    margin: 6px;
+    background-color: dodgerblue;
+}
+
+button {
+
+    border-radius: 21px;
+    min-width: 100px;
+    min-height: 28px;
+    margin: 6px;
+    background-color: rgb(94, 194, 181);
+}
+
+.fade-in-div {
+    animation: fadeIn 3s;
+    -webkit-animation: fadeIn 3s;
+    -moz-animation: fadeIn 3s;
+    -o-animation: fadeIn 3s;
+    -ms-animation: fadeIn 3s;
+  }
+  @keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-moz-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-webkit-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-o-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
+  
+  @-ms-keyframes fadeIn {
+    0% {opacity:0;}
+    100% {opacity:1;}
+  }
